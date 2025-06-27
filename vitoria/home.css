@@ -1,0 +1,181 @@
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #222;
+}
+header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.logo {
+  height: 40px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+  font-family: 'Archivo Black', Arial, sans-serif;
+}
+nav a:hover {
+  color: #FF69B4;
+}
+main {
+  padding: 2rem;
+}
+.titulo-principal {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  font-size: 2.3rem;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  color: #FF4F8B;
+  letter-spacing: 1px;
+}
+.bolos-section {
+  background: #fff;
+  max-width: 1100px;
+  margin: 0 auto 2.5rem auto;
+  border-radius: 14px;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+}
+.bolos-section > h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  color: #000;
+  font-size: 1.5rem;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.bolos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bolo-card {
+  background: #fff;
+  border-radius: 18px;
+  border: 1.5px solid #222;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, border 0.2s;
+  position: relative;
+}
+.bolo-card:hover {
+  box-shadow: 0 8px 32px rgba(255,79,139,0.10);
+  border: 2px solid #FF4F8B;
+}
+.bolo-card img {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  align-self: center;
+  border: 1.5px solid #222;
+}
+.bolo-card h2 {
+  font-size: 1.15rem;
+  margin: 0.5rem 0 0.2rem 0;
+  color: #000;
+  font-family: 'Archivo Black', Arial, sans-serif;
+}
+.bolo-card p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.bolo-card .preco {
+  font-weight: bold;
+  color: #FF4F8B;
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 1.1rem;
+  font-family: 'Archivo Black', Arial, sans-serif;
+}
+.bolo-card .avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.bolo-card .estrelas {
+  color: #FFD700;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.bolo-card .comentarios {
+  color: #FF69B4;
+  font-size: 0.98rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.bolo-card .btn {
+  background: #FF4F8B;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(255,79,139,0.10);
+}
+.bolo-card .btn:hover {
+  background: #000;
+  color: #FF69B4;
+}
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  header, main {
+    padding: 1rem;
+  }
+  .bolos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+} 

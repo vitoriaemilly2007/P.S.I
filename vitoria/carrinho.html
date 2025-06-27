@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolos & Cia - Carrinho</title>
+  <link rel="stylesheet" href="carrinho.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="carrinho-bg-confete"></div>
+  <header>
+    <img src="logo.svg" alt="Bolos & Cia Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="carrinho.html">Carrinho</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Seu Carrinho</h1>
+    <section class="carrinho-section">
+      <table class="carrinho-table">
+        <thead>
+          <tr>
+            <th>Imagem</th>
+            <th>Livro</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+            <th>Subtotal</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="imgs/Bolo-de-milho-768x512.jpg" alt="Bolo de Milho no carrinho" class="carrinho-img"></td>
+            <td>Bolo de Milho</td>
+            <td>1</td>
+            <td>R$ 24,90</td>
+            <td>R$ 24,90</td>
+            <td><button class="remover-btn">Remover</button></td>
+          </tr>
+          <tr>
+            <td><img src="imgs/Bolo-prestigio-768x512.jpg" alt="Bolo Prestígio no carrinho" class="carrinho-img"></td>
+            <td>Bolo Prestígio</td>
+            <td>2</td>
+            <td>R$ 49,90</td>
+            <td>R$ 99,80</td>
+            <td><button class="remover-btn">Remover</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="resumo-total">
+        <span>Total:</span>
+        <span class="valor-total">R$ 124,70</span>
+      </div>
+      <a href="#modal-compra" class="finalizar-btn">Finalizar Compra</a>
+      <div id="modal-compra" class="modal">
+        <div class="modal-content">
+          <a href="#" class="close">&times;</a>
+          <p>Compra finalizada com sucesso!</p>
+          <a href="home.html" class="btn-carrinho">Voltar para Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Bolos & Cia. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html> 

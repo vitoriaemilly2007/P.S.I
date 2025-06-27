@@ -1,0 +1,273 @@
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #fffbe6 0%, #ffe0f7 100%);
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.logo {
+  height: 40px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #FF69B4;
+}
+.detalhes-bg-confete {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/confetti.png');
+  opacity: 0.12;
+}
+main {
+  flex: 1;
+  padding: 2.5rem 1rem 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.detalhes-container {
+  background: #fff8fc;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(255,79,139,0.13), 0 2px 12px rgba(0,0,0,0.08);
+  border: 2.5px solid #FF4F8B;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2.5rem;
+  max-width: 750px;
+  width: 100%;
+  align-items: flex-start;
+  position: relative;
+  overflow: visible;
+}
+.detalhes-img {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(255,79,139,0.18);
+  border: 3px solid #FFD700;
+  background: #fffbe6;
+  position: relative;
+  z-index: 2;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+.detalhes-img:hover {
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(255,79,139,0.22);
+}
+.detalhes-info h1 {
+  color: #FF4F8B;
+  margin-top: 0;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.detalhes-info h1::before {
+  content: "🍰";
+  font-size: 2.1rem;
+  margin-right: 0.3rem;
+}
+.detalhes-desc {
+  margin: 1.2rem 0 1.5rem 0;
+  font-size: 1.13rem;
+  color: #6d3b1a;
+  background: #fff3e6;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  box-shadow: 0 1px 4px rgba(255,200,100,0.08);
+}
+.detalhes-preco {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.3rem;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  background: linear-gradient(90deg, #FF4F8B 60%, #FFD700 100%);
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(255,79,139,0.10);
+  border: 2px solid #FFD700;
+  letter-spacing: 1px;
+}
+.btn-adicionar {
+  background: #FF4F8B;
+  color: #fff;
+  padding: 1rem 2.2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 1.15rem;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+  margin-right: 1rem;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  box-shadow: 0 2px 12px rgba(255,79,139,0.13);
+  position: relative;
+  z-index: 2;
+}
+.btn-adicionar:hover {
+  background: #FF4F8B;
+  color: #fff;
+  transform: none;
+}
+.btn-carrinho {
+  display: inline-block;
+  background: #fff;
+  color: #FF4F8B;
+  border: 2.5px solid #FF4F8B;
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(255,79,139,0.10);
+  position: relative;
+  z-index: 2;
+}
+.btn-carrinho:hover {
+  background: #fff;
+  color: #FF4F8B;
+  transform: none;
+}
+.detalhes-extra {
+  margin-top: 2.2rem;
+}
+.detalhes-extra h2 {
+  font-size: 1.18rem;
+  margin-bottom: 0.7rem;
+  color: #FF4F8B;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+.detalhes-extra ul {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.detalhes-extra ul li {
+  background: #fff3e6;
+  border-radius: 10px;
+  padding: 0.7rem 1.1rem;
+  font-size: 1.05rem;
+  color: #6d3b1a;
+  box-shadow: 0 1px 4px rgba(255,200,100,0.08);
+  border-left: 5px solid #FFD700;
+  position: relative;
+}
+.detalhes-extra ul li::before {
+  content: "🎂";
+  margin-right: 0.7rem;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: linear-gradient(135deg, #fffbe6 0%, #ffe0f7 100%);
+  opacity: 0.98;
+}
+.modal:target {
+  display: block;
+}
+.modal-content {
+  background: #fff8fc;
+  margin: 10% auto;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  border-radius: 18px;
+  max-width: 370px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(255,79,139,0.18);
+  border: 2.5px solid #FFD700;
+  position: relative;
+}
+.modal-content p {
+  font-size: 1.2rem;
+  color: #FF4F8B;
+  margin-bottom: 1.2rem;
+  font-family: 'Archivo Black', Arial, sans-serif;
+}
+.close {
+  color: #FF4F8B;
+  float: right;
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -1.2rem;
+  margin-right: -1.2rem;
+  transition: color 0.2s;
+}
+.close:hover {
+  color: #FFD700;
+}
+@media (max-width: 900px) {
+  .detalhes-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0.5rem;
+    justify-items: center;
+    max-width: 98vw;
+  }
+  .detalhes-img {
+    width: 150px;
+    height: 180px;
+    margin-top: 0;
+  }
+}
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+} 
