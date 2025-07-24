@@ -95,6 +95,107 @@ function Questão_6() {
 }
 Questão_6()
 
+console.log('--------------------------------------------------------------------------------')
+function Questão_7() {
+    let limiteEstoque= 10
+    let quantidadeEstoque = 0
+    for (let i = 1; i <= limiteEstoque; i++) {
+        quantidadeEstoque++;
+        console.log(`📦 Peça número ${quantidadeEstoque} adicionada ao estoque.`);
+    }
+
+    console.log(`✅ Estoque completo. Total de peças: ${quantidadeEstoque}`);
+}
+Questão_7()
+console.log('--------------------------------------------------------------------------------')
+function Questão_8() {
+    // Subfunção 1: Calcular o preço com desconto
+    function calcularDesconto(precoOriginal, percentualDesconto) {
+        let precoFinal = precoOriginal - (precoOriginal * percentualDesconto / 100);
+        return precoFinal.toFixed(2);
+    }
+
+    // Subfunção 2: Verificar se o cliente pode comprar
+    function podeComprar(precoFinal, saldoCarteira) {
+        if (saldoCarteira >= precoFinal) {
+            return "Compra efetuada com sucesso! 🛒";
+        } else {
+            return "Saldo insuficiente para realizar a compra. 💸";
+        }
+    }
+
+    // Exemplo de uso
+    let precoOriginal = 150.00;
+    let desconto = 20; // 20%
+    let saldoCliente = 130.00;
+
+    let precoComDesconto = calcularDesconto(precoOriginal, desconto);
+    console.log(` Preço original: R$ ${precoOriginal.toFixed(2)}`);
+    console.log(` Desconto: ${desconto}%`);
+    console.log(` Preço com desconto: R$ ${precoComDesconto}`);
+
+    let mensagem = podeComprar(precoComDesconto, saldoCliente);
+    console.log(` Saldo disponível: R$ ${saldoCliente.toFixed(2)}`);
+    console.log(mensagem);
+}
+Questão_8();
+console.log('--------------------------------------------------------------------------------')
+// Questão 9
+function Questão_9() {
+    let cliente = {
+        nome: 'Angela',
+        idade: 19,
+    };
+
+    let funcionario = {
+        nome: 'Paulo',
+        id: 230456740,
+    };
+
+    console.log("Nome do cliente:", cliente.nome);
+    console.log("ID do funcionário:", funcionario.id);
+}
+
+Questão_9();
+console.log('--------------------------------------------------------------------------------')
+
+function Questão_10() {
+    // Função 1: Pagamento parcelado
+    function pagamentoParcelado(valorTotal, numParcelas) {
+        let valorParcela = valorTotal / numParcelas;
+        return {
+            parcelas: numParcelas,
+            valorParcela: valorParcela.toFixed(2),
+            valorTotal: valorTotal.toFixed(2)
+        };
+    }
+
+    // Função 2: Pagamento com desconto à vista
+    function pagamentoComDesconto(valorTotal, percentualDesconto) {
+        let valorFinal = valorTotal - (valorTotal * percentualDesconto / 100);
+        return {
+            desconto: percentualDesconto,
+            valorFinal: valorFinal.toFixed(2)
+        };
+    }
+
+    // Simulação de compra
+    let valorDaCompra = 300.00;
+
+    // Pagamento parcelado em 3 vezes
+    let parcelado = pagamentoParcelado(valorDaCompra, 3);
+    console.log(`💳 Pagamento parcelado em ${parcelado.parcelas}x de R$ ${parcelado.valorParcela} (Total: R$ ${parcelado.valorTotal})`);
+
+    // Pagamento à vista com 10% de desconto
+    let desconto = pagamentoComDesconto(valorDaCompra, 10);
+    console.log(`💵 Pagamento à vista com ${desconto.desconto}% de desconto: R$ ${desconto.valorFinal}`);
+}
+
+// Executar a função
+Questão_10();
+
+
+
 
 
 
