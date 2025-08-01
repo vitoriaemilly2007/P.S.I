@@ -17,7 +17,10 @@ function Questão3(){
     let divisao = numero1 / numero2
     let restoSoma = numero1 % numero2
 
-    console.log(soma, subtracao, multiplicacao, divisao, restoSoma)
-//continuar
+    // gerando número aleatório de 1 a 10
+    let numeroAleatorio = getRandomInt(1,10)
+
+    console.log(soma, subtracao, multiplicacao, divisao, restoSoma, numeroAleatorio)
+    
 }
 Questão3()
