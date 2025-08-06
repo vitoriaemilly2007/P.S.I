@@ -138,21 +138,43 @@ console.log("Números maiores que 10:", resul);
 //09 - Faça um algoritmo que receba a idade do usuário e informe se ele é criança (0-12),
 //adolescente (13-17), adulto (18-59) ou idoso (60+).
 function Questão9() {
-    let idade = Number(prompt("Digite sua idade:"));
+    const idade = Number(prompt("Digite sua idade: "));
 
-    if (idade >= 0 && idade <= 12) {
-        return "Você é uma criança!";
-    } else if (idade >= 13 && idade <= 17) {
-        return "Você é adolescente!";
-    } else if (idade >= 18 && idade <= 59) {
-        return "Você é adulto!";
-    } else if (idade >= 60) {
-        return "Você é idoso!";
+    if (isNaN(idade) || idade < 0) {
+        console.log("Idade inválida!");
+    } else if (idade <= 12) {
+        console.log("Você é uma criança!");
+    } else if (idade <= 17) {
+        console.log("Você é adolescente!");
+    } else if (idade <= 59) {
+        console.log("Você é adulto!");
     } else {
-        return "Idade inválida!";
+        console.log("Você é idoso!");
     }
 }
+Questão9();
 
-console.log(Questão9());
+//10 - Implemente uma função que recebe um callback e executa esse callback após 3
+//segundos, imprimindo uma mensagem antes e depois da execução.
+function Questao10(callback) {
+    console.log("Iniciando execução...");
+
+    setTimeout(() => {
+        callback(); // Executa o callback após 3 segundos
+        console.log("Callback executado com sucesso!");
+    }, 3000);
+}
+
+// Exemplo de uso com uma função callback
+function exemploCallback() {
+    console.log(">> Esta é a função callback sendo executada.");
+}
+
+// Chamada da função Questao10 com o callback como argumento
+Questao10(exemploCallback);
+
+
+
+
 
 
